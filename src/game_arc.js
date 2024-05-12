@@ -20,11 +20,17 @@ class Game_arc {
     init() {
         this.scene = this.createScene();
         this.initInput();
+<<<<<<< HEAD
         this.player_arc = new Player_arc(this.scene);
         //this.arrow = new Arrow(this.scene);
         //Inspector.Show(this.scene, {});
         this.player_arc.init();
         //this.arrow.init();
+=======
+        this.Player_arc = new Player_arc(this.scene);
+       // Inspector.Show(this.scene, {});
+        this.Player_arc.init();
+>>>>>>> cd2aeb46ac291e635ed72bd42512feef8230934d
 
         const verticalLine = MeshBuilder.CreateLines("verticalLine", {
             points: [new Vector3(0, -0.02, 0), new Vector3(0, 0.02, 0)],
