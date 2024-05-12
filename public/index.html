@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Olympic Games</title>
-<style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olympic Games</title>
+    <style>
     body {
         display: flex;
         flex-direction: column;
@@ -55,75 +55,32 @@
         width: 60px;
         height: 20px;
     }
-</style>
+    </style>
 </head>
 
 <body>
-<!-- Menu -->
-<h1>Olympic Games</h1>
-<div class="container">
-    <img src="course.jpeg" alt="Course" class="game" id="course">
-    <img src="arc.jpeg" alt="Tir à l'arc" class="game" id="tir-a-larc">
-    <img src="ski.jpeg" alt="Ski" class="game" id="ski">
-</div>
+    <h1>Olympic Games</h1>
+    <div class="container">
+        <img src="course.jpeg" alt="Course" class="game" id="course">
+        <img src="arc.jpeg" alt="Tir à l'arc" class="game" id="tir-a-larc">
+        <img src="ski.jpeg" alt="Ski" class="game" id="ski">
+    </div>
 
-<!-- Conteneur pour le jeu de course -->
-<div id="courseGame">
-    <canvas id="renderCanvas" touch-action="none"></canvas>
-    <div id="fps">0</div>
-</div>
-
-<!-- Conteneur pour le jeu de tir à l'arc -->
-<!--<div id="tirALarcGame">
-    <canvas id="renderCanvas" touch-action="none"></canvas>
-    <div id="fps">0</div>
-</div>-->
-
-<!--<script src="https://cdn.babylonjs.com/havok/HavokPhysics_umd.js"></script>-->
-<script>
-    /*document.getElementById('tir-a-larc').addEventListener('click', () => {
-        startTirALArcGame(); // Appeler la fonction pour démarrer le jeu de tir à l'arc
-    });*/
-
-    document.getElementById('course').addEventListener('click', () => {
-        startCourseGame(); // Appeler la fonction pour démarrer le jeu de course
-    });
-
-/*function startTirALArcGame() {
-    // Afficher le conteneur du jeu de tir à l'arc et cacher le menu
-    document.getElementById('tirALarcGame').style.display = 'block';
-    document.querySelector('.container').style.display = 'none';
-    
-    // Initialiser et démarrer le jeu de tir à l'arc ici
-    // Par exemple :
-    const canvas = document.getElementById("renderCanvas");
-    const engine = new BABYLON.Engine(canvas, true); // Passer 'true' pour autoriser la gestion automatique du redimensionnement du canvas
-
-    const game = new BABYLON.Game(engine, canvas);
-    game.init();
-    game.start();
-}*/
-
-function startCourseGame() {
-    // Afficher le conteneur du jeu de course et cacher le menu
-    document.getElementById('courseGame').style.display = 'block';
-    document.querySelector('.container').style.display = 'none';
-    
-    // Initialiser et démarrer le jeu de course ici
-    // Par exemple :
-    function startCourseGame() {
-    document.getElementById('courseGame').style.display = 'block';
-    document.querySelector('.container').style.display = 'none';
-
-    const canvas = document.getElementById("renderCanvas");
-    const engine = new BABYLON.Engine(canvas, true);
-
-    const game = new Game_course(engine, canvas);
-    game.init2();
-    game.start2();
-}
-}
-
-</script>
-</body>
+    <!-- Conteneur pour le jeu de course -->
+    <div id="courseGame">
+        <canvas id="renderCanvas" touch-action="none"></canvas>
+        <div id="fps">0</div>    
+        <script>
+            // Récupérer l'élément de l'icône de jeu de course
+            const courseIcon = document.getElementById('course');
+        
+            // Ajouter un écouteur d'événements pour détecter le clic sur l'icône de jeu de course
+            courseIcon.addEventListener('click', function() {
+                // Afficher le conteneur du jeu de course
+                document.getElementById('courseGame').style.display = 'block';
+                // Ici, vous devriez initialiser et démarrer votre jeu Game_course
+            });
+        </script>
+        </div>
+    </body>
 </html>
