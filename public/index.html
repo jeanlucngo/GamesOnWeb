@@ -66,19 +66,32 @@
         <img src="ski.jpeg" alt="Ski" class="game" id="ski">
     </div>
 
-    <!-- Conteneur pour le jeu de course -->
     <div id="courseGame">
         <canvas id="renderCanvas" touch-action="none"></canvas>
         <div id="fps">0</div>    
         <script>
-            // Récupérer l'élément de l'icône de jeu de course
             const courseIcon = document.getElementById('course');
-        
-            // Ajouter un écouteur d'événements pour détecter le clic sur l'icône de jeu de course
-            courseIcon.addEventListener('click', function() {
-                // Afficher le conteneur du jeu de course
+                    courseIcon.addEventListener('click', function() {
                 document.getElementById('courseGame').style.display = 'block';
-                // Ici, vous devriez initialiser et démarrer votre jeu Game_course
+            });
+        </script>
+    </div>
+
+    <div id="tirALarcGame">
+        <script>
+            const tirALarcIcon = document.getElementById('tir-a-larc');
+        
+            tirALarcIcon.addEventListener('click', function() {
+                document.getElementById('tirALarcGame').style.display = 'block';
+            });
+        </script>
+    </div>
+
+    <div id="skiGame">
+        <script>
+            const skiIcon = document.getElementById('ski');
+                    skiIcon.addEventListener('click', function() {
+                document.getElementById('skiGame').style.display = 'block';
             });
         </script>
         </div>
