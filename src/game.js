@@ -17,20 +17,16 @@ const MAIN_SCENE_ROT_X = 0;
 const PLAYER_Z_BASE = 14;
 
 import envfileUrl from "../assets/env/environment.env";
-
-
 import meshUrl from "../assets/models/player.glb";
 import snowBoardUrl from "../assets/models/intermediate_advanced_snowboard.glb";
 import roadTextureUrl from "../assets/textures/14_snow texture-seamless.jpg";
-
 import musicUrl from "../assets/musics/Black Diamond.mp3";
 import hitSoundUrl from "../assets/sounds/344033__reitanna__cute-impact.wav";
 import skiingSoundUrl from "../assets/sounds/skiing.mp3";
-
 import obstacle1Url from "../assets/models/handpainted_pine_tree.glb";
-
 import flareParticleUrl from "../assets/textures/flare.png";
 import GameUI from "./gameUI";
+
 class Game {
 
     engine;
@@ -92,7 +88,7 @@ class Game {
 
     }
 
-    start() {
+    start3() {
 
         this.startTimer = 0;
         this.engine.runRenderLoop(() => {

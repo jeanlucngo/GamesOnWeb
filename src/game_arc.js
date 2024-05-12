@@ -17,7 +17,7 @@ class Game_arc {
        this.canvas = canvas;
     }
     
-    init() {
+    init2() {
         this.scene = this.createScene();
         this.initInput();
         this.player_arc = new Player_arc(this.scene);
@@ -74,7 +74,7 @@ class Game_arc {
             });
         }
         
-    start() {
+    start2() {
         this.engine.runRenderLoop(() => {
             let delta = this.engine.getDeltaTime() / 1000.0;
             this.updateMoves(delta);

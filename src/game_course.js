@@ -50,7 +50,7 @@ class Game_course {
     }
     
 
-    init2() {
+    init() {
         this.engine.displayLoadingUI();
         this.createScene().then(() => {
 
@@ -74,7 +74,7 @@ class Game_course {
 
     }
 
-    start2() {
+    start() {
 
         this.startTimer = 0;
     this.finishLineAdded = false;
@@ -194,7 +194,6 @@ if (!this.playerReachedFinishLine) {
     }
 
     async createScene() {
-
         // This creates a basic Babylon Scene object (non-mesh)
         this.scene = new Scene(this.engine);
         this.scene.clearColor = new Color3(0.7, 0.7, 0.95);
@@ -249,7 +248,7 @@ if (!this.playerReachedFinishLine) {
         res.meshes[0].position.set(0, TRACK_HEIGHT / 2, 6);
         res.meshes[0].rotation = new Vector3(0, 0, 0);
         res.animationGroups[0].stop();
-        res.animationGroups[1].play(true);
+        //res.animationGroups[1].play(true);
         
         this.playerBox = MeshBuilder.CreateCapsule("playerCap", {width:0.4, height:1.7});
         this.playerBox.position.y = 1.7/2;
