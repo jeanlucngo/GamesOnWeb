@@ -3,7 +3,7 @@ import player from "../assets/models/player.glb";
 import bow from "../assets/models/bow.glb";
 import arrow from "../assets/models/arrow.glb";
 
-class Player {
+class Player_arc {
 
     constructor(scene) {
         this.scene = scene;
@@ -44,4 +44,4 @@ class Player {
     inputMove() {
     }
 }
-export default Player;
+export default Player_arc;

@@ -1,5 +1,6 @@
 import { Engine, FreeCamera, HemisphericLight, MeshBuilder, Scene, SceneLoader, Vector3 } from "@babylonjs/core";
 import Game from "./game_arc";
+import Game_arc from "./game_arc";
 
 let engine;
 let canvas;
@@ -14,7 +15,7 @@ window.onload = () => {
         engine.resize();
     });
     
-    game = new Game(engine, canvas);
+    game = new Game_arc(engine, canvas);
     game.init();
     game.start();
 }

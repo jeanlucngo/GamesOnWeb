@@ -1,11 +1,11 @@
 import { FreeCamera, HemisphericLight, Scene, SceneLoader, Vector3, KeyboardEventTypes, MeshBuilder, Color3 } from "@babylonjs/core";
 import { Inspector } from "@babylonjs/inspector";
-import Player from "./player_arc";
+import Player_arc from "./player_arc";
 import terrain from "../assets/models/terrain.glb";
 import target1 from "../assets/models/target1.glb";
 
 
-class Game {
+class Game_arc {
     engine;
     canvas;
     scene;
@@ -20,9 +20,9 @@ class Game {
     init() {
         this.scene = this.createScene();
         this.initInput();
-        this.player = new Player(this.scene);
+        this.Player_arc = new Player_arc(this.scene);
        // Inspector.Show(this.scene, {});
-        this.player.init();
+        this.Player_arc.init();
 
         const verticalLine = MeshBuilder.CreateLines("verticalLine", {
             points: [new Vector3(0, -0.02, 0), new Vector3(0, 0.02, 0)],
@@ -120,4 +120,4 @@ class Game {
         return scene;
     }
 } 
-export default Game;
+export default Game_arc;
