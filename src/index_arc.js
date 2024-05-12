@@ -1,5 +1,5 @@
 import { Engine, FreeCamera, HemisphericLight, MeshBuilder, Scene, SceneLoader, Vector3 } from "@babylonjs/core";
-import Game from "./game";
+import Game from "./game_arc";
 
 let engine;
 let canvas;

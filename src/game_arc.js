@@ -1,6 +1,7 @@
 import { FreeCamera, HemisphericLight, Scene, SceneLoader, Vector3, KeyboardEventTypes, MeshBuilder, Color3 } from "@babylonjs/core";
 import { Inspector } from "@babylonjs/inspector";
-import Player from "./player";
+import Player from "./player_arc";
+import Arrow from "./arrow";
 import terrain from "../assets/models/terrain.glb";
 import target1 from "../assets/models/target1.glb";
 
@@ -9,7 +10,6 @@ class Game {
     engine;
     canvas;
     scene;
-
     inputMap = {};
     actions = {};
 
@@ -21,9 +21,11 @@ class Game {
     init() {
         this.scene = this.createScene();
         this.initInput();
-        this.player = new Player(this.scene, this.scene.activeCamera);
+        this.player = new Player(this.scene);
+        this.arrow = new Arrow(this.scene);
         Inspector.Show(this.scene, {});
         this.player.init();
+        this.arrow.init();
 
         const verticalLine = MeshBuilder.CreateLines("verticalLine", {
             points: [new Vector3(0, -0.02, 0), new Vector3(0, 0.02, 0)],
@@ -58,7 +60,7 @@ class Game {
                     case KeyboardEventTypes.KEYDOWN:
                         this.inputMap[kbInfo.event.code] = true;
                         if (kbInfo.event.code === "Space") {
-                            this.player.Shoot();
+                            this.arrow.shoot();
                         }
                         break;
                     case KeyboardEventTypes.KEYUP:
@@ -79,7 +81,7 @@ class Game {
         });
     }
 
-    update(delta) {
+    update() {
     }
 
     updateMoves(delta) {
